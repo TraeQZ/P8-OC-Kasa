@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 40px;
+}
+
+.footer,
+.footerAbout {
+  background-color: #000000;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoFooter {
+  padding-top: 64px;
+}
+.textFooter {
+  color: #ffffff;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}

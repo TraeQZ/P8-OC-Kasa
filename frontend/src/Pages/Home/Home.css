@@ -1,0 +1,15 @@
+.layout-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-main {
+  width: 100%;
+    max-width: 1440px;
+
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  flex-grow: 1;
+}
