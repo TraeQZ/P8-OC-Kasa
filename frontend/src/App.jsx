@@ -12,7 +12,7 @@ function App() {
         {/* Le composant AppRouter DOIT être un conteneur Flex */}
         {/* On lui donne une classe pour l'étirer */}
         <main className="content"> 
-            <AppRouter /> // ← Change selon l'URL
+            <AppRouter /> {/* Change selon l'URL */}
         </main>
         
       </div>

@@ -1,8 +1,4 @@
 .footer {
-  margin-top: 40px;
-}
-
-.footer {
   width: 100%;                    
   margin-top: 40px;
   margin-left: 0;                 
@@ -14,7 +10,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .logoFooter {
@@ -35,6 +30,7 @@ Styles Responsifs pour les écrans de taille Tablette et Mobile (jusqu'à 768px)
   /* --- 1. Conteneur principal (.footer) --- */
   .footer,
   .footerAbout {
+    width: 100%;
     /* Réduction significative de la hauteur totale */
     height: 150px; 
     /* Réduction de la marge supérieure si nécessaire */

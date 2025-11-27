@@ -1,14 +1,84 @@
-grid-main .collapse {
-  margin-left: auto;
-  margin-right: auto;
-  /* On réapplique ici la max-width pour l'alignement des Collapse */
-  max-width: 1023px; 
+.layout-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.layout-main .banner {
+  width: 100%;
+  margin: 0 auto 38px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.grid-main{
+  max-width: 1023px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid-main .collapse {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Tablette (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .layout-main .banner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto 38px auto;
+  }
+  
+  .grid-main {
+    max-width: 100%;
+    gap: 25px;
+    padding: 0 40px;
+  }
+}
+
+/* Tablette moyenne (max-width: 768px) */
 @media screen and (max-width: 768px) {
-  /* Supprimer la contrainte de largeur et les marges automatiques sur mobile */
+  .layout-main .banner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto 19px auto;
+  }
+  
+  .grid-main {
+    max-width: 100%;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
   .grid-main .collapse {
-    /* Le Collapse prend 100% de la largeur du conteneur .grid-main */
-    max-width: 80%; 
-    margin: 0 0 10px 0; /* Remplacer par la marge mobile désirée */
+    width: 100%;
+  }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .layout-main .banner {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto 19px auto;
+  }
+  
+  .grid-main {
+    max-width: 100%;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  .grid-main .collapse {
+    width: 100%;
   }
 }
