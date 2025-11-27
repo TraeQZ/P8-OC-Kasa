@@ -1,0 +1,84 @@
+/* Error.css - Page 404 responsive */
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  min-height: 60vh;
+  text-align: center;
+}
+
+/* Le grand "404" */
+
+
+/* Texte d'erreur */
+.txt-404 {
+    font-family: Montserrat;
+  font-size: 36px; 
+  line-height: 143%;
+  font-weight: 500;
+  color: #ff6060;
+  margin: 0 0 100px;
+  max-width: 800px;
+  padding: 0 20px;
+  letter-spacing: 0cap;
+}
+
+/* Lien de retour */
+.lien-404 {
+  font-size: clamp(14px, 2vw, 18px); /* Responsive entre 14px et 18px */
+  color: #070707;
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+  font-weight: 500;
+}
+
+.error-link:hover {
+  opacity: 0.7;
+}
+
+/* 
+   RESPONSIVE BREAKPOINTS
+   */
+
+/* Tablettes (768px et moins) */
+@media (max-width: 768px) {
+  .error {
+    padding: 80px 20px;
+    min-height: 50vh;
+  }
+
+  .error-text {
+    margin: 0 0 80px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobiles (480px et moins) */
+@media (max-width: 480px) {
+  .error {
+    padding: 60px 15px;
+  }
+
+  .error-code {
+    margin-bottom: 15px;
+  }
+
+  .error-text {
+    margin: 0 0 60px;
+    line-height: 1.4;
+  }
+}
+
+/* Très petits écrans (320px) */
+@media (max-width: 320px) {
+  .error {
+    padding: 40px 10px;
+  }
+
+  .error-text {
+    margin: 0 0 40px;
+  }
+}

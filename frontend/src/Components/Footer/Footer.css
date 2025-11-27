@@ -2,13 +2,19 @@
   margin-top: 40px;
 }
 
-.footer,
-.footerAbout {
+.footer {
+  width: 100%;                    
+  margin-top: 40px;
+  margin-left: 0;                 
+  margin-right: 0;                
+  padding: 0;                     
+  box-sizing: border-box;
   background-color: #000000;
   height: 209px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .logoFooter {
@@ -20,4 +26,36 @@
   padding-top: 40px;
   padding-bottom: 20px;
   font-size: 24px;
+}
+/*
+Styles Responsifs pour les écrans de taille Tablette et Mobile (jusqu'à 768px)
+*/
+@media screen and (max-width: 768px) {
+
+  /* --- 1. Conteneur principal (.footer) --- */
+  .footer,
+  .footerAbout {
+    /* Réduction significative de la hauteur totale */
+    height: 150px; 
+    /* Réduction de la marge supérieure si nécessaire */
+    margin-top: 30px;
+  }
+
+  /* --- 2. Logo (.logoFooter) --- */
+  .logoFooter {
+    /* Réduire le padding supérieur pour centrer le logo */
+    padding-top: 50px;
+    /* Réduire la taille du logo pour les petits écrans */
+    width: 80px; 
+    height: auto;
+  }
+
+  /* --- 3. Texte (.textFooter) --- */
+  .textFooter {
+    /* Réduire la taille de la police */
+    font-size: 12px;
+    /* Réduire le padding pour rapprocher le texte et le logo */
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

@@ -36,3 +36,31 @@
 .header-nav a:hover {
   text-decoration: underline;
 }
+/*
+Styles Responsifs pour les écrans de taille Tablette et Mobile (jusqu'à 768px)
+*/
+@media screen and (max-width: 768px) {
+
+  /* --- 1. Conteneur principal (Marges et Padding) --- */
+  .header-content {
+    /* Réduire le padding vertical et horizontal de 45px 50px à 20px 20px */
+    padding: 20px 20px; 
+  }
+
+  /* --- 2. Logo (Image) --- */
+  .header-content img {
+    /* Réduire la taille du logo (environ 30% de réduction) */
+    width: 100px;
+    height: 25px;
+  }
+
+  /* --- 3. Navigation (Liens) --- */
+  .header-nav {
+    /* Réduire l'espacement entre les liens */
+    gap: 20px; 
+    /* Réduire la taille de la police pour qu'elle tienne bien */
+    font-size: 12px;
+    /* Ajuster la casse pour un meilleur visuel sur mobile (optionnel mais recommandé) */
+    text-transform: uppercase;
+  }
+}

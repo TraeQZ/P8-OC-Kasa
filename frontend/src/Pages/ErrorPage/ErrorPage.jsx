@@ -1,5 +1,12 @@
+import Error404 from "../../Components/Error404/Error404";
 function ErrorPage() {
-  return <h1>404 - Page not found</h1>;
+  return (
+    <div className="layout-main">
+      <div className="grid">
+        <Error404 />
+      </div>
+    </div>
+  );
 }
 
 export default ErrorPage;

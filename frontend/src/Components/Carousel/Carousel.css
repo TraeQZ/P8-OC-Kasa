@@ -1,0 +1,93 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 415px; /* Hauteur du carousel */
+  border-radius: 25px;
+  overflow: hidden;
+  /* Pourquoi overflow: hidden ? 
+     Pour que l'image ne déborde pas des coins arrondis
+     Si on l'enlève ? L'image peut sortir du cadre */
+}
+
+.carousel-image {
+    width: 80%;
+  height: 415px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.carousel-arrow {
+  color: #FFFFFF;
+  width: 46.68px;
+  height: 79.20px;
+  transform: rotate(0deg);
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%); /* Centrage parfait */
+  background: none;
+  cursor: pointer;
+  z-index: 10;
+  /* z-index: 10 = par-dessus l'image
+     Si on l'enlève ? La flèche peut être cachée derrière l'image */
+}
+
+/* 👈 FLÈCHE GAUCHE */
+.carousel-arrow.left {
+  left: 20px; /* 20px du bord gauche */
+}
+
+/* La flèche gauche doit être retournée ! */
+.carousel-arrow.left img {
+  transform: rotate(90deg);
+  /* Pourquoi rotate(90deg) ?
+     Ta flèche Vector.png pointe probablement vers le haut ⬆️
+     On la tourne de 90° pour qu'elle pointe vers la gauche ⬅️
+     Si on l'enlève ? La flèche pointera dans la mauvaise direction */
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+  /* filter pour rendre la flèche blanche
+     Si on l'enlève ? La flèche gardera sa couleur d'origine */
+}
+
+/* 👉 FLÈCHE DROITE */
+.carousel-arrow.right {
+  right: 20px; /* 20px du bord droit */
+}
+
+/* La flèche droite doit être retournée dans l'autre sens ! */
+.carousel-arrow.right img {
+  transform: rotate(-90deg);
+  /* Pourquoi rotate(-90deg) ?
+     Pour qu'elle pointe vers la droite ➡️
+     Si on l'enlève ? La flèche pointera dans la mauvaise direction */
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+/* Effet hover (quand on passe la souris) */
+.carousel-arrow:hover img {
+  transform: scale(1.2) rotate(90deg);
+  /* scale(1.2) = agrandit la flèche de 20%
+     Si on l'enlève ? Pas d'effet au survol */
+}
+
+.carousel-arrow.right:hover img {
+  transform: scale(1.2) rotate(-90deg);
+}
+
+.carousel-counter {
+  position: absolute;
+  bottom: 20px; /* 20px du bas */
+  left: 50%; /* Au milieu horizontalement */
+  transform: translateX(-50%); /* Centrage parfait */
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  /* Si on l'enlève ? Le compteur sera mal positionné */
+}
+
+ 

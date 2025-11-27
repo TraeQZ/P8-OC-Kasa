@@ -1,0 +1,14 @@
+grid-main .collapse {
+  margin-left: auto;
+  margin-right: auto;
+  /* On réapplique ici la max-width pour l'alignement des Collapse */
+  max-width: 1023px; 
+}
+@media screen and (max-width: 768px) {
+  /* Supprimer la contrainte de largeur et les marges automatiques sur mobile */
+  .grid-main .collapse {
+    /* Le Collapse prend 100% de la largeur du conteneur .grid-main */
+    max-width: 80%; 
+    margin: 0 0 10px 0; /* Remplacer par la marge mobile désirée */
+  }
+}
