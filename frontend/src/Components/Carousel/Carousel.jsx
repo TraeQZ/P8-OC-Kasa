@@ -9,12 +9,12 @@ function Carousel({ pictures }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   // currentIndex = quelle photo on regarde (0 = première photo)
 
-  // Fonction pour aller à la photo suivante
+  // Fonction pour aller à la photo suivante, Cycle avant.
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % pictures.length);
   };
 
-  // Fonction pour aller à la photo précédente
+  // Fonction pour aller à la photo précédente, cycle arrière
   const prevImage = () => {
     setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length);
   };

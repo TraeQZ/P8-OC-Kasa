@@ -1,10 +1,10 @@
 import Banner from "../../Components/Banner/Banner";
 import Collapse from "../../Components/Collapse/Collapse";
-
 import "../../Components/Banner/Banner.css";
 import "./About.css";
-
 import AboutBannerImage from "../../assets/AboutBanner.png";
+
+
 function About() {
   return (
     <div className="layout-main">

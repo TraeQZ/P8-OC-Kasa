@@ -18,7 +18,10 @@ function Gallery() {
 
   return (
     <div className="properties-grid">
-      {/* map = boucle qui crée une Card pour chaque logement */}
+      {/* map = boucle qui crée une Card pour chaque logement 
+      la méthode .map() utilisée sur le tableau properties. 
+      Pour chaque objet dans ce tableau (property), 
+      elle retourne un nouvel élément d'interface utilisateur : le composant <Card>.*/}
       {properties.map((property) => (
         <Card
           key={property.id} // Identifiant unique (obligatoire pour React) Permet à React de savoir quel élément a changé
@@ -27,7 +30,6 @@ function Gallery() {
           cover={property.cover}
         />
       ))}
-      {/*map fonction de tableau ici utilisé pour transformer les données en jsx*/}
     </div>
   );
 }

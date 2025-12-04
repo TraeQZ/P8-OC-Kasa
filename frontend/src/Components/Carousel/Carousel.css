@@ -27,10 +27,16 @@
   top: 50%; 
   transform: translateY(-50%); /* Centrage parfait */
   background: none;
+  border: none;
+  background: none;
   cursor: pointer;
   z-index: 10;
   /* z-index: 10 = par-dessus l'image
      Si on l'enlève ? La flèche peut être cachée derrière l'image */
+}
+.carousel-arrow:focus,
+.carousel-arrow:active {
+    outline: none; /* Supprime le contour */
 }
 
 /* 👈 FLÈCHE GAUCHE */
@@ -41,10 +47,7 @@
 /* La flèche gauche doit être retournée ! */
 .carousel-arrow.left img {
   transform: rotate(90deg);
-  /* Pourquoi rotate(90deg) ?
-     Ta flèche Vector.png pointe probablement vers le haut ⬆️
-     On la tourne de 90° pour qu'elle pointe vers la gauche ⬅️
-     Si on l'enlève ? La flèche pointera dans la mauvaise direction */
+  /* Pour la direction du fleche */
   width: 50px;
   height: 50px;
   filter: brightness(0) invert(1);
@@ -90,4 +93,9 @@
   /* Si on l'enlève ? Le compteur sera mal positionné */
 }
 
- 
+ @media (max-width: 768px) {
+  .carousel-counter {
+    /* Masquer complètement l'élément sur mobile */
+    display: none;
+  }
+}

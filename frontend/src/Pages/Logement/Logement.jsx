@@ -10,7 +10,7 @@ function Logement() {
   // On récupère l'ID du logement depuis l'URL
   const { id } = useParams();
 
-  // On prépare la fonction pour naviguer vers une autre page
+  // On prépare la fonction pour naviguer vers une autre page (page d'erreur)
   const navigate = useNavigate();
 
   // On crée une variable pour stocker les informations du logement
@@ -18,7 +18,6 @@ function Logement() {
   const [logement, setLogement] = useState(null);
 
   // Cette fonction sépare le nom complet en prénom et nom
-  // Exemple: "John Doe" devient firstName: "John", lastName: "Doe"
   function separerNomComplet(nomComplet) {
     const partiesDuNom = nomComplet.split(" ");
     const prenom = partiesDuNom[0];
@@ -68,8 +67,7 @@ function Logement() {
       // On met à jour notre variable d'état avec les données formatées
       setLogement(logementFormate);
     } catch (erreur) {
-      // Si quelque chose ne va pas (erreur réseau, logement introuvable, etc.)
-      console.error("Une erreur s'est produite :", erreur);
+      
       // On redirige l'utilisateur vers la page d'erreur 404
       navigate("/404");
     }
@@ -105,7 +103,9 @@ function Logement() {
           <h1>{logement.title}</h1>
           <p className="location">{logement.location}</p>
 
-          {/* On affiche tous les tags du logement */}
+          {/* On affiche tous les tags du logement:
+          On utilise .map() pour parcourir le tableau tags du logement et créer un élément <span className="tag">
+           pour chaque tag trouvé.*/}
           <div className="tags">
             {logement.tags.map((tag, index) => (
               <span key={index} className="tag">

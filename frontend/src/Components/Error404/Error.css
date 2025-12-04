@@ -1,4 +1,3 @@
-/* Error.css - Page 404 responsive */
 
 .error {
   display: flex;
@@ -10,10 +9,8 @@
   text-align: center;
 }
 
-/* Le grand "404" */
 
 
-/* Texte d'erreur */
 .txt-404 {
     font-family: Montserrat;
   font-size: 36px; 
@@ -53,6 +50,10 @@
   .error-text {
     margin: 0 0 80px;
     line-height: 1.5;
+  }
+  .img {
+    max-width: 189px;
+    margin-bottom: 100px;
   }
 }
 

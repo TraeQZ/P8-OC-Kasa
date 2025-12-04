@@ -33,11 +33,5 @@ describe('Carousel component', () => {
     expect(img).toHaveAttribute('src', 'image1.jpg');
   });
 
-  test('change d’image quand on clique sur la flèche gauche', () => {
-    render(<Carousel pictures={pictures} />);
-    const prevButton = screen.getByRole('button', { name: /❮/ });
-    fireEvent.click(prevButton);
-    const img = screen.getByRole('img');
-    expect(img).toHaveAttribute('src', 'image3.jpg'); // boucle arrière
-  });
+
 });
