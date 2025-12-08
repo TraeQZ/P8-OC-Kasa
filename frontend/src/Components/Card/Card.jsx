@@ -5,8 +5,6 @@ import { Link } from "react-router-dom";
 function Card({ id, title, cover }) {
   return (
     <Link to={`/Logement/${id}`} className="card">
-      {/*permet de coller la valeur de la prop id à la fin du chemin statique
-      /Logement/*/}
       <img src={cover} alt={title} />
       <h2>{title}</h2>
     </Link>

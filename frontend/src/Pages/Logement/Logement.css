@@ -97,3 +97,13 @@
 .collapse-wrapper {
   flex: 1;
 }
+@media screen and (max-width: 600px) {
+  .logement-collapses {
+    display: block;
+    gap: 0;
+
+  }
+  .collapse-wrapper {
+      width: 100%; 
+  }
+}

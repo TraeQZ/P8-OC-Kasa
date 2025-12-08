@@ -14,9 +14,9 @@ function App() {
         <main className="content"> 
             <AppRouter /> {/* Change selon l'URL */}
         </main>
-        
+       <Footer />
+
       </div>
-              <Footer />
 
        </BrowserRouter>
   );

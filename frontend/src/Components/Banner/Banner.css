@@ -24,6 +24,7 @@ width: 100%;
   padding: 0 20px;
   width: 100%;
   text-align: center;
+   z-index: 2;
 }
 
 .banner-title {
@@ -31,19 +32,24 @@ width: 100%;
   color: #fff;
   font-weight: 700;
   z-index: 1;
+  white-space: nowrap;
 }
+.mobile-break { display: none; }
 /* Media queries pour mobiles (max-width: 480px) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   .banner {
-    height: 111px; /* Réduction de hauteur */
-    border-radius: 10px; /* Réduction de bordure */
-    /* ... autres styles pour l'alignement si nécessaire ... */
+    height: 111px;
+    border-radius: 10px;
     padding: 0 20px;
   }
 
-  .banner-title {
-    font-size: 24px; /* Réduction de la taille du titre */
-    /* ... autres styles pour le titre ... */
+  .banner-inner {
     text-align: left;
   }
+
+  .banner-title {
+    font-size: 24px;
+    max-width: 150px;   
+  }
+.mobile-break { display: inline; }
 }

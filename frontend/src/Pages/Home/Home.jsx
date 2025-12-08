@@ -10,7 +10,9 @@ import "./Home.css";
 function Home() {
   return (
     <div className="layout-main">
-      <Banner title="Chez vous, partout et ailleurs" />
+      <Banner title="Chez vous, partout et ailleurs"  multilineMobile />
+       
+
       <div className="grid-main">
         <Gallery />
       </div>
